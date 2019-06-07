@@ -439,7 +439,8 @@ int aesEncrypt(const uint8_t *key, uint32_t keyLen, const uint8_t *pt, uint8_t *
 		return -1;
 	}
 
-	if ((addnum = len % BLOCKSIZE)) {
+	if (len % BLOCKSIZE) {
+		addnum = 16 - len % BLOCKSIZE;
 		uint8_t *newpt = new uint8_t[len + addnum];
 		memcpy(newpt, pt, len);
 		memcpy(newpt + len, addarry, addnum);
